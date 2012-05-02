@@ -75,19 +75,19 @@ function niClientApp_getURL() {
 function niClientApp_loadURL(wndId) {
 	switch (wndId.id) {
 		case "nova_initia_tool_events":
-			safari.application.activeBrowserWindow.openTab().url = "http://www.nova-initia.com/remog/events/";
+			safari.application.activeBrowserWindow.openTab().url = "http://www.nova-initia.com/remog/events?LASTKEY="+NovaInitia.Toolbar.getKey();
 			break;
 		case "nova_initia_tool_resgister":
 			safari.application.activeBrowserWindow.openTab().url = "http://www.nova-initia.com/register.php";
 			break;
 		case "nova_initia_tool_mail":
-			safari.application.activeBrowserWindow.openTab().url = "http://www.nova-initia.com/remog/mail";
+			safari.application.activeBrowserWindow.openTab().url = "http://www.nova-initia.com/remog/mail?LASTKEY="+NovaInitia.Toolbar.getKey();
 			break;
 		case "nova_initia_tool_profile":
-			safari.application.activeBrowserWindow.openTab().url = "http://www.nova-initia.com/remog/user/"+_username;
+			safari.application.activeBrowserWindow.openTab().url = "http://www.nova-initia.com/remog/user/"+_username+"?LASTKEY="+NovaInitia.Toolbar.getKey();
 			break;
 		case "nova_initia_tool_sg":
-			safari.application.activeBrowserWindow.openTab().url = "http://www.nova-initia.com/remog/trade";
+			safari.application.activeBrowserWindow.openTab().url = "http://www.nova-initia.com/remog/trade?LASTKEY="+NovaInitia.Toolbar.getKey();
 			break;
 		default: 
 			safari.application.activeBrowserWindow.openTab().url = wndId;

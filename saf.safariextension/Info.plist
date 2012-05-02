@@ -2,10 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Author</key>
+	<string>Team 404</string>
 	<key>Builder Version</key>
-	<string>7534.55.3</string>
+	<string>7534.53.10</string>
 	<key>CFBundleDisplayName</key>
-	<string>nova-initia-test</string>
+	<string>Nova Initia</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.nova-initia</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -33,6 +35,8 @@
 		<key>Scripts</key>
 		<dict/>
 	</dict>
+	<key>Description</key>
+	<string>The Nova Initia Safari Extension</string>
 	<key>ExtensionInfoDictionaryVersion</key>
 	<string>1.0</string>
 	<key>Permissions</key>
