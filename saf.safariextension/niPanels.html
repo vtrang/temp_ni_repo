@@ -1,0 +1,509 @@
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="skin/nova-initia_toolbar.css" type="text/css" />
+	</head>
+	<body>
+			<div id="nova_initia_barrel_panel" class="nova_initia_panel_class" noautofocus="true" noautohide="true">
+				<div>
+					<div style="position: absolute; z-index: 1"><img id="nova_initia_barrel_panel_image" src="skin/images/overlays/barrel_found.jpg" top="0" left="0"//></div>
+					<ul class="nova_initia_panel_text" id="nova_initia_barrel_panel_text" top="130" left="0" style="margin-top:130px;list-style-type: none; list-style-position: outside">
+						<input id="nova_initia_barrel_panel_label" value=""/ type="text" style="color: black; background: transparent; border: 0px" />
+						<input id="nova_initia_barrel_panel_title_0" class="nova_initia_barrel_panel_title" value="" / type="text" style="color: black; background: transparent; border: 0px" />
+						<input id="nova_initia_barrel_panel_title_1" class="nova_initia_barrel_panel_title" value="" / type="text" style="color: black; background: transparent; border: 0px" />
+						<input id="nova_initia_barrel_panel_title_2" class="nova_initia_barrel_panel_title" value="" / type="text" style="color: black; background: transparent; border: 0px" />
+					</ul>
+					<div class="nova_initia_panel_buttons" id="nova_initia_barrel_panel_buttons" top="160" left="0" style="margin-top:90px;position: absolute;z-index: 2">
+						<button id="nova_initia_barrel_panel_profile_button" class="chain" top="-86" left="0">Profile</button>
+						<div style="margin-top:-40px;float:left;position: absolute;z-index: 3"><button id="nova_initia_barrel_panel_button" class="open" top="0" left="0" tooltiptext="&nova_initia_barrel_panel_button.tooltiptext;"style="">&nbsp;</button></div>
+						<div style="margin-top:-40px;margin-left:130px;position: absolute;z-index: 3"><button class="dismiss" top="0" left="120" onclick="" style="">&nbsp;</button></div>
+					</div>
+				</div>
+			</div>
+			<div id="nova_initia_signpost_panel" class="nova_initia_panel_class" noautofocus="true" noautohide="true">
+				<div>
+					<div style="position: absolute; z-index: 1"><img id="nova_initia_signpost_panel_image" src="skin/images/overlays/signpost_set.jpg" top="0" left="0" //></div>
+					<ul align="center" top="150" left="0" style="margin-top:130px;list-style-type: none; list-style-position: outside; display:inline;position: absolute; z-index: 2">
+						<ul class="nova_initia_panel_text" id="nova_initia_signpost_panel_text" style="margin-top:130px;list-style-type: none; list-style-position: outside">
+							<description id="nova_initia_signpost_panel_title_label" value=""/>
+							<input id="nova_initia_signpost_panel_user_label" value=""/ type="text" style="color: black; background: transparent; border: 0px" />
+							<!--<input id="nova_initia_signpost_panel_comment_input" disabled="true" multiline="true" value=""/>-->
+						</ul>
+					</ul>
+					<ul align="center" class="nova_initia_panel_buttons" id="nova_initia_signpost_panel_buttons" top="160" left="0" style="margin-top:130px;list-style-type: none; list-style-position: outside; display:inlineposition: absolute;z-index: 3">
+						<div style="margin-top:160px;margin-left:-50px;position: absolute;z-index: 4"><button id="nova_initia_signpost_panel_goto_start_button" class="tostart">To Start</button></div>
+						<div style="margin-top:160px;margin-left:90px;position: absolute;z-index: 4"><button class="dismiss" onclick="" style="">&nbsp;</button></div>
+					</ul>
+					
+				</div>
+			</div>
+			<div  id="nova_initia_tour_start_panel" class="nova_initia_panel_class" noautofocus="true" noautohide="true">
+				<div>
+					<div style="position: absolute; z-index: 1"><img src="skin/images/overlays/signpost_set.jpg" top="0" left="0" //></div>
+					<ul align="center" top="0" left="0" style="margin-top:130px;list-style-type: none; list-style-position: outside; display:inline">
+						<ul class="nova_initia_panel_text" id="nova_initia_tour_start_panel_summary" style="margin-top:130px;position: absolute;z-index: 2;list-style-type: none; list-style-position: outside">
+							<input multiline="true" size="22" rows="9" maxlength="342" value="comment" id="nova_initia_tour_start_panel_comment_input" class="nova_initia_panel_input" />
+							<input id="nova_initia_tour_start_panel_title_label" value=""/ type="text" style="color: black; background: transparent; border: 0px" />
+						</ul>
+					</ul>
+					<ul align="center" class="nova_initia_panel_buttons" id="nova_initia_tour_start_panel_buttons"  top="160" left="0" style="position: absolute;z-index: 3;margin-top:130px;list-style-type: none; list-style-position: outside; display:inline">
+						<div style="margin-top:28px;margin-left:-50px;position: absolute;z-index: 4"><button id="nova_initia_tour_start_panel_start_tour_button" class="start">Start Tour</button></div>
+						<div style="margin-top:28px;margin-left:90px;position: absolute;z-index: 4"><button class="dismiss" onclick="" style="">&nbsp;</button></div>
+					</ul>
+				</div>
+			</div>
+			
+			
+			
+			<!-- this panel needs a complete rework, its hidden for now-->
+			<div   id="nova_initia_tour_panel" class="nova_initia_panel_class" noautofocus="true" noautohide="true">
+				<div>
+					<div style="position: absolute; z-index: 1"><img src="skin/images/overlays/signpost_set.jpg" top="0" left="0" //></div>
+					<ul align="center" top="0" left="0" style="margin-top:130px;list-style-type: none; list-style-position: outside; display:inline;position: absolute;z-index: 2">
+						<ul class="nova_initia_panel_text" id="nova_initia_tour_panel_summary" style="margin-top:130px;list-style-type: none; list-style-position: outside;position: absolute;z-index: 3">
+							<input style="margin-left:-55px;margin-top:-124px" multiline="true" size="22" rows="9" maxlength="342" value="comment" id="nova_initia_tour_panel_comment_input" class="nova_initia_panel_input"/>
+							<input id="nova_initia_tour_panel_title_label" value="title"/ type="text" style="color: black; background: transparent; border: 0px" />
+							<input id="nova_initia_tour_panel_hidden_label" value="hidden" hidden="true"/ type="text" style="color: black; background: transparent; border: 0px" />
+						</ul>
+					</ul>
+					<ul style="margin-left:-60px;z-index:4">
+						
+							
+								<td><input id="nova_initia_tour_panel_back_label" value="back "/ type="text" style="margin-top:50px;margin-left:80px;color: black;  border: 2px;position: absolute;z-index: 7" /></td>
+								<div style="margin-left:0px;margin-top:25px;position: absolute;z-index: 5"><button class="chain black" id="nova_initia_tour_panel_back_button" label="&nova_initia_panels_back_button" onclick="NovaInitia.Toolbar.tour_go_back()"style="">&nbsp;</button></div>
+					</ul>		
+					<ul style="margin-left:-60px;z-index:4">	
+								<td><input id="nova_initia_tour_panel_complete_label" value="complete " hidden="true"/ type="text" style="color: black; background: transparent; border: 0px;position: absolute;z-index: 4" /></td>
+								<td><div style="margin-left:40px;margin-top:40position: absolute;z-index: 5"><button class="chain black" id="nova_initia_tour_panel_complete_button" label="&nova_initia_panels_complete_button" hidden="true"style="">&nbsp;</button></div></td>
+					</ul>		
+					<ul style="margin-left:-60px;z-index:4">		
+								<td><div style="margin-top:60px;margin-left:-3px;position: absolute;z-index: 5"><button id="nova_initia_tour_panel_A_button">AButton</button></div></td>
+								<td><div style="margin-top:60px;margin-left:120px;position: absolute;z-index: 5"><button id="nova_initia_tour_panel_B_button">BButton</button></div></td>
+					</ul>		
+					<ul style="margin-left:-60px;z-index:4">		
+								<td><div style="margin-top:0px;margin-left:230px;position: absolute;z-index: 5"><button id="nova_initia_tour_panel_C_button">CButton</button></div></td>
+								<td><div style="margin-top:-100px;margin-left:230px;position: absolute;z-index: 5"><button id="nova_initia_tour_panel_D_button">DButton</button></div></td>
+							
+						
+					</ul>
+							<ul top="25" left="150" style="margin-top:130px;list-style-type: none; list-style-position: outside;position: absolute;z-index: 5">
+								<input id="nova_initia_tour_panel_dismiss_label" value=" "/ type="text" style="color: black;  border: 1px;position: absolute;z-index: 4" />
+								<div style="margin-top:25px;margin-left:150px;position: absolute;z-index: 5"><button class="chain black" label="Leave Tour" onclick="" style="">&nbsp;</button></div>
+							</ul>
+						</div>
+					</ul>
+				</div>
+			</div>
+			<div id="nova_initia_doorway_panel" class="nova_initia_panel_class" noautofocus="true" noautohide="true">
+				<div>
+					<div style="position: absolute; z-index: 0"><img id="nova_initia_doorway_panel_image" src="skin/images/overlays/doorway_set.png" top="0" left="0" //></div>
+					<ul align="center" top="145" left="0"  style="z-index:2;margin-top:130px;list-style-type: none; list-style-position: outside; display:inline">
+						<div style="z-index:3">
+							<ul class="nova_initia_panel_text" id="nova_initia_doorway_panel_text" style=";margin-top:130px;list-style-type: none; list-style-position: outside">
+							<input id="nova_initia_doorway_panel_label" value=""/ type="text" style="color: black; background: transparent; border: 0px" />
+							<input id="nova_initia_doorway_panel_hint_label_0" class="nova_initia_doorway_panel_hint_label" value="hint1" / type="text" style="color: black; background: transparent; border: 0px" />
+							<input id="nova_initia_doorway_panel_hint_label_1" class="nova_initia_doorway_panel_hint_label" value="hint2" / type="text" style="color: black; background: transparent; border: 0px" />
+							<input id="nova_initia_doorway_panel_hint_label_2" class="nova_initia_doorway_panel_hint_label" value="hint3" / type="text" style="color: black; background: transparent; border: 0px" />
+							<input id="nova_initia_doorway_panel_hidden_label" value="" hidden="true"/ type="text" style="color: black; background: transparent; border: 0px" />
+						</div>
+						</ul>
+					</ul>
+					<ul align="center" class="nova_initia_panel_buttons" id="nova_initia_doorway_panel_buttons" top="148" left="0" style="margin-top:130px;list-style-type: none; list-style-position: outside; display:inline">
+						<div style="z-index:3">
+							<div style="margin-top:0px;margin-left:0px;position: absolute;z-index: 4"><button id="nova_initia_doorway_panel_prev_button" top="0" left="0" class="previous chain"onclick="NovaInitia.Toolbar.doorway_carousel_prev()" disabled="true">Previous</button></div>
+							<div style="margin-top:-40px;margin-left:0px;position: absolute;z-index: 4"><button id="nova_initia_doorway_panel_chain_button" class="chain" top="-100" left="0">Goto chain start</button></div>
+							<div style="margin-top:-10px;margin-left:0px;position: absolute;z-index: 4"><button id="nova_initia_doorway_panel_profile_button" class="chain" top="-70" left="0">Profile</button></div>
+							<div style="margin-top:0px;margin-left:158px;position: absolute;z-index: 4"><button id="nova_initia_doorway_panel_next_button" top="0" left="158" class="next chain" onclick="NovaInitia.Toolbar.doorway_carousel_next()" disabled="true">Next</button></div>
+							<div style="margin-top:87px;margin-left:0px;position: absolute;z-index: 4"><button id="nova_initia_doorway_panel_button" top="26" left="0" class="through"></button></div>
+							<div style="margin-top:87px;margin-left:120px;position: absolute;z-index: 4"><button id="nova_initia_doorway_panel_dismiss_button" top="26" left="120" class="dismiss" onclick=""></button></div>
+						</div>
+					</ul>
+					<ul class="nova_initia_door_count" top="148" left="190" style="margin-top:130px;list-style-type: none; list-style-position: outside; display:inline">
+						<ul class="nova_initia_panel_text" style="margin-top:130px;list-style-type: none; list-style-position: outside">
+							<description align="center" class="count" id="nova_initia_doorway_panel_count" value="1 of " />
+						</ul>
+					</ul>
+				</div>
+			</div>
+			<div  id="nova_initia_doorway_panel_end" class="nova_initia_panel_class" noautofocus="true" noautohide="true">
+				<div>
+					<div style="position: absolute; z-index: 0"><img id="nova_initia_doorway_panel_popup_image" src="skin/images/overlays/doorway_place.png" top="0" left="0"//></div>
+					<ul align="center" top="0" left="0" style="z-index:3;margin-top:130px;list-style-type: none; list-style-position: outside">
+						<ul style="margin-top:150px;list-style-type: none; list-style-position: outside;position: absolute;z-index: 3">
+							<input id="nova_initia_doorway_panel_end_label" value="label"/ type="text" style="color: black; background: transparent; border: 0px" />
+						</ul>
+						<ul style="margin-top:130px;list-style-type: none; list-style-position: outside;position: absolute;z-index: 3">
+							<input id="nova_initia_doorway_panel_end_comment_label" value="comment"/ type="text" style="color: black; background: transparent; border: 0px" />
+							<input id="nova_initia_doorway_panel_end_comment_input" class="nova_initia_panel_input" disabled="true" multiline="true" value="input"/>
+						</ul>
+						<ul class="nova_initia_panel_buttons" style="margin-top:130px;list-style-type: none; list-style-position: outside; display:inline;position: absolute;z-index: 3">
+							<div style="margin-left:130px"><button class="rateup" id="nova_initia_doorway_panel_end_button" onclick=""style="">&nbsp;</button></div>
+							<div style="margin-left:130px"><button class="ratedown" onclick=""style="">&nbsp;</button></div>
+						</ul>
+					</ul>
+				</div>
+			</div>
+			<div id="nova_initia_trap_panel" class="nova_initia_panel_class" noautofocus="true" noautohide="true">
+				<div>
+					<div style="position: absolute; z-index: 1"><img id="nova_initia_trap_panel_image" src="skin/images/overlays/trap_triggered.png" top="0" left="0" //></div>
+					<ul class="nova_initia_panel_text" id="nova_initia_trap_panel_text" top="150" left="0" style="margin-top:130px;list-style-type: none; list-style-position: outside;position: absolute; z-index: 2">
+						<input id="nova_initia_trap_panel_label" value=""/ type="text" style="color: black; background: transparent; border: 0px" />
+						<description id="nova_initia_trap_panel_description"/>
+					</ul>
+					<ul class="nova_initia_panel_buttons" id="nova_initia_trap_panel_buttons" top="160" left="0" style="margin-top:130px;list-style-type: none; list-style-position: outside; display:inlineposition: absolute; z-index: 2">
+						<div style="margin-left:-40px;margin-top:160px;position: absolute; z-index: 3"><button class="yeah" onclick="NovaInitia.Toolbar.new_message('#nova_initia_trap_panel_label')" style="">&nbsp;</button></div>
+						<div style="margin-left:100px;margin-top:160px;position: absolute; z-index: 3"><button class="dismiss" onclick="" style="">&nbsp;</button></div>
+					</ul>
+				</div>
+			</div>
+			<div id="nova_initia_shield_panel" class="nova_initia_panel_class" noautofocus="true" noautohide="true">
+				<div>
+					<div style="position: absolute; z-index: 1"><img id="nova_initia_shield_panel_image" src="skin/images/overlays/shield_triggered.jpg" top="0" left="0" //></div>
+					<ul class="nova_initia_panel_text" id="nova_initia_shield_panel_text" top="150" left="0" style="margin-top:130px;list-style-type: none; list-style-position: outside">
+						<input id="nova_initia_shield_panel_label" value=""/ type="text" style="color: black; background: transparent; border: 0px" />
+						<description id="nova_initia_shield_panel_description"/>
+					</ul>
+					<ul class="nova_initia_panel_buttons" id="nova_initia_shield_panel_buttons" top="160" left="0" style="margin-top:130px;list-style-type: none; list-style-position: outside; display:inline">
+						<div style="margin-left:0px;margin-top:125px;position: absolute; z-index: 3"><button class="yeah" onclick="NovaInitia.Toolbar.new_message('#nova_initia_shield_panel_label')" style="">&nbsp;</button></div>
+						<div style="margin-left:140px;margin-top:125px;position: absolute; z-index: 3"><button class="dismiss" onclick="" style="">&nbsp;</button></div>
+					</ul>
+				</div>
+			</div>
+			<div id="nova_initia_fail_panel" class="nova_initia_panel_class" noautofocus="true" noautohide="true">
+				<div>
+					<div style="position: absolute; z-index: 1"><img id="nova_initia_fail_panel_image" src="skin/images/overlays/spider_failed.jpg" top="0" left="0" //></div>
+					<ul class="nova_initia_panel_text" id="nova_initia_fail_panel_text" top="150" left="0" style="margin-top:130px;list-style-type: none; list-style-position: outside">
+						<input id="nova_initia_fail_panel_label" value="Tool Failed"/ type="text" style="color: black; background: transparent; border: 0px" />
+						<description id="nova_initia_fail_panel_description"/>
+					</ul>
+					<ul class="nova_initia_panel_buttons" id="nova_initia_fail_panel_buttons" top="160" left="0" style="margin-top:130px;list-style-type: none; list-style-position: outside; display:inline">
+						<div style="margin-left:130px;margin-top:125px;position: absolute; z-index: 3"><button class="dismiss" onclick="" style="">&nbsp;</button></div>
+					</ul>
+				</div>
+			</div>
+			<div id="nova_initia_random_panel" class="nova_initia_panel_class" noautofocus="true" noautohide="true">
+				<div>
+					<div style="position: absolute; z-index: 1"><img id="nova_initia_random_panel_image" src="skin/images/overlays/random_darkness.jpg" top="0" left="0" //></div>
+					<ul class="nova_initia_panel_text" id="nova_initia_random_panel_text" top="150" left="0" style="margin-top:130px;list-style-type: none; list-style-position: outside;position: absolute;z-index: 2">
+						<input id="nova_initia_random_panel_label" value=""/ type="text" style="color: black; background: transparent; border: 0px" />
+						<description id="nova_initia_fail_panel_description"/>
+					</ul>
+					<ul class="nova_initia_panel_buttons" id="nova_initia_random_panel_buttons" top="160" left="0" style="margin-top:130px;list-style-type: none; list-style-position: outside; display:inline">
+						<div style="margin-left:230px;margin-top:235px;position: absolute; z-index: 3"><button class="dismiss" onclick="" style="">&nbsp;</button></div>
+					</ul>
+				</div>
+			</div>
+			<div id="nova_initia_spider_panel" class="nova_initia_panel_class" noautofocus="true" noautohide="true">
+				<div>
+					<div style="margin-top:110px;position: absolute; z-index: 1"><img id="nova_initia_spider_panel_image" 	src="skin/images/overlays/spider_set.jpg" top="0" left="0" //></div>
+					<ul class="nova_initia_panel_text" id="nova_initia_spider_panel_text" top="150" left="0" style="margin-top:130px;list-style-type: none; list-style-position: outside">
+						<input id="nova_initia_spider_panel_label" value="" / type="text" style="color: black; background: transparent; border: 0px" />
+						<description id="nova_initia_spider_panel_description" />
+					</ul>
+					<ul class="nova_initia_panel_buttons" id="nova_initia_spider_panel_buttons" top="160" left="0" style="margin-top:130px;list-style-type: none; list-style-position: outside; display:inline">
+						<div style="margin-left:0px;margin-top:235px;position: absolute; z-index: 3"><button class="yeah" onclick="NovaInitia.Toolbar.new_message('#nova_initia_spider_panel_label')"style="">&nbsp;</button></div>
+						<div style="margin-left:140px;margin-top:235px;position: absolute; z-index: 3"><button class="dismiss" onclick=""style="">&nbsp;</button></div>
+					</ul>
+				</div>
+			</div>
+			<div id="nova_initia_tool_doorway_panel_popup" level="top" class="nova_initia_panel_class_top" position="after_start" onpopupshown="NovaInitia.Toolbar.try_popup(document.getElementById('nova_initia_tool_doorway_panel_popup_stash_button'),document.getElementById('nova_initia_tool_doorway_panel_popup'))">
+				<div>
+					<div style="position: absolute; z-index: 1"><img id="nova_initia_doorway_panel_popup_image" src="skin/images/overlays/doorway_place.png" top="0" left="0"//></div>
+					<ul align="center" top="0" left="0" style="margin-top:130px;list-style-type: none; list-style-position: outside;z-index: 3">
+						<input align="center" id="nova_initia_tool_doorway_panel_popup_label" class="popupTitle" value="&nova_initia_tool_doorway_panel_popup_label"/ type="text" style="color: black; background: transparent; border: 0px" />
+						<table>
+							<tr>
+								<tr>
+									<input class="nova_initia_panel_label" value="&nova_initia_tool_doorway_panel_popup_URL"/ type="text" style="color: black; margin-left: 100px; margin-top: -20px; margin-left: -80px; background: transparent; border: 0px" />
+									<input id="nova_initia_tool_doorway_panel_popup_URL" class="nova_initia_panel_input" tooltiptext="&nova_initia_tool_doorway_panel_popup_URL.tooltiptext;" emptytext="&nova_initia_tool_doorway_panel_popup_URL.emptytext;" value=""/>
+									<div style="position: absolute; z-index: 2"><img id="nova_initia_tool_doorway_panel_popup_URL_image" class="nova_initia_panel_image" src="chrome://nova-initia_toolbar/skin/images/icons/arrow.PNG" hidden="true"//></div>
+								</tr>
+								<tr>
+									<input class="nova_initia_panel_label" value="&nova_initia_tool_doorway_panel_popup_hint"/ type="text" style="color: black; margin-left: 50px; margin-top: -20px; background: transparent; border: 0px" />
+									<input id="nova_initia_tool_doorway_panel_popup_hint" class="nova_initia_panel_input" tooltiptext="&nova_initia_tool_doorway_panel_popup_hint.tooltiptext;" maxlength="114" value=""/>
+								</tr>
+								<tr>
+									<input class="nova_initia_panel_label" value="&nova_initia_tool_doorway_panel_popup_comment"/ type="text" style="color: black; background: transparent; border: 0px" />
+									<input id="nova_initia_tool_doorway_panel_popup_comment" class="nova_initia_panel_input" tooltiptext="&nova_initia_tool_doorway_panel_popup_comment.tooltiptext;" multiline="true" value=""/>
+								</tr>
+							</tr>
+						</table>
+						<ul style="margin-top:130px;list-style-type: none; list-style-position: outside">
+							<input value="&nova_initia_tool_doorway_panel_popup_add_to_chain"/ type="text" style="color: black; background: transparent; border: 0px" />
+							<input type="checkbox" id="nova_initia_tool_doorway_panel_popup_add_to_chain"/>
+						</ul>
+						<ul style="margin-top:130px;list-style-type: none; list-style-position: outside">
+							<input value="&nova_initia_tool_doorway_panel_popup_nsfw"/ type="text" style="color: black; background: transparent; border: 0px" />
+							<input type="checkbox" id="nova_initia_tool_doorway_panel_popup_nsfw"/>
+						</ul>
+						<ul class="nova_initia_panel_buttons" style="margin-top:130px;list-style-type: none; list-style-position: outside; display:inline">
+							<div style="margin-left:-150px; margin-top:207px"><button class="small" id="nova_initia_tool_doorway_panel_popup_stash_button" label="&nova_initia_tool_doorway_panel_popup_stash_button" onclick="NovaInitia.Toolbar.open_doorway();"style="">Stash</button></div>
+							<div style="margin-left:-150px; margin-top:107px"><button class="small" id="nova_initia_tool_doorway_panel_popup_dismiss_button" label="&nova_initia_cancel" onclick="document.getElementById('nova_initia_tool_doorway_panel_popup').hidePopup();"style="">Cancel</button></div>
+						</ul>
+					</ul>
+				</div>
+			</div>
+			<div id="nova_initia_tool_signpost_panel_popup" level="top" class="nova_initia_panel_class_top" position="after_start">
+				<div>
+				<div style="position: absolute; z-index: 1"><img id="nova_initia_signpost_panel_popup_image" src="skin/images/overlays/signpost_place.png" top="0" left="0"//></div>
+					<ul align="center" top="0" left="0" style="margin-top:130px;list-style-type: none; list-style-position: outside;z-index:4">
+						<input align="center" id="nova_initia_tool_signpost_panel_popup_label" class="popupTitle" value="label"/ type="text" style="color: black; background: transparent; border: 0px" />
+						<table style="margin-left:-30px;position: absolute; z-index: 6">
+							<tr>
+								<tr>
+									<td><input class="nova_initia_panel_label" value="Title:"/ type="text" style="color: black; background: transparent; border: 0px" /></td>
+									<td><input id="nova_initia_tool_signpost_panel_popup_title" class="nova_initia_panel_input" style="margin-left:-80px" tooltiptext="&nova_initia_tool_signpost_panel_popup_title.tooltiptext;" value=""/></td>
+								</tr>
+								<tr>
+									<td><input class="nova_initia_panel_label" value="Comment:"/ type="text" style="color: black; background: transparent; border: 0px" /></td>
+									<td><input id="nova_initia_tool_signpost_panel_popup_comment" class="nova_initia_panel_input" style="margin-left:-80px" tooltiptext="&nova_initia_tool_signpost_panel_popup_comment.tooltiptext;" multiline="true" value=""/></td>
+								</tr>
+								<tr>
+									<td><input class="nova_initia_panel_label" value="NSFW:"/ type="text" style="color: black; background: transparent; border: 0px" /></td>
+									<td><ul><input type="checkbox" id="nova_initia_tool_signpost_panel_popup_nsfw" /></ul></td>
+								</tr>
+							</tr>
+						</table>
+						<ul style="margin-top:0px;list-style-type: none; list-style-position: outside;position: absolute; z-index: 7">
+							<div style="margin-left:-150px; margin-top:107px"><button class="small" id="nova_initia_tool_signpost_panel_popup_placed_button" label="&nova_initia_tool_signpost_panel_popup_placed_button" onclick="NovaInitia.Toolbar.place_signpost();"style="">Place</button></div>
+							<div style="margin-left:70px; margin-top:-26px"><button class="small" label="&nova_initia_cancel" onclick="document.getElementById('nova_initia_tool_signpost_panel_popup').hidePopup();"style="">Cancel</button></div>
+						</ul>
+					</ul>
+				</div>
+			</div>
+			<br>
+			<br>
+			<br>
+			<div id="nova_initia_mail_panel_popup" level="top" class="nova_initia_panel_class_top" position="after_start" style="position:absolute">
+				<div>
+					<div style="position: absolute; z-index: 1"><img id="nova_initia_mail_panel_popup_image" src="skin/images/overlays/signpost_place.png" top="0" left="0"//></div>
+					<ul align="center" top="0" left="0" style="position:absolute;margin-left:-30px;list-style-type: none; list-style-position: outside;position: absolute; z-index: 3;">
+						<input align="center" id="nova_initia_mail_panel_popup_label" class="popupTitle" value="Send a Message"/ type="text" style="color: black; margin-top: -10px; background: transparent; border: 0px" />
+						<table>
+							<tr>
+								<tr>
+									<td><input class="nova_initia_panel_label" value="To:"/ type="text" style="color: black; background: transparent; border: 0px" /></td>
+									<td><input id="nova_initia_mail_receiver" class="nova_initia_panel_input" style="margin-left:-80px" tooltiptext="&nova_initia_mail_receiver.tooltiptext;" value=""/></td>
+								</tr>
+								<tr>
+									<td><input class="nova_initia_panel_label" value="Subject:"/ type="text" style="color: black; background: transparent; border: 0px" /></td>
+									<td><input id="nova_initia_mail_subject" class="nova_initia_panel_input" style="margin-left:-80px" tooltiptext="&nova_initia_mail_subject.tooltiptext;" value=""/></td>
+								</tr>
+								<tr>
+									<td><input class="nova_initia_panel_label" value="Message:"/ type="text" style="color: black; background: transparent; border: 0px" /></td>
+									<td><input id="nova_initia_mail_body" class="nova_initia_panel_input" style="margin-left:-80px" tooltiptext="&nova_initia_mail_body.tooltiptext;" multiline="true" value=""/></td>
+								</tr>
+							</tr>
+						</table>
+						<ul style="list-style-type: none; list-style-position: outside">
+							<div style="margin-left: -180px; margin-top: 10px"><button class="small" id="nova_initia_mail_send_button" label="&nova_initia_mail_send_button" onclick="NovaInitia.Toolbar.process_toolbutton(this,null);"style="">Send</button></div>
+							<div style="margin-left: 50px; margin-top: -26px"><button class="small" label="&nova_initia_cancel" onclick="document.getElementById('nova_initia_mail_panel_popup').hidePopup();"style="">Cancel</button></div>
+						</ul>
+					</ul>
+				</div>
+			</div>
+			<!--added 3 line breaks because panels were overlapping. Delete these-->
+			<br>
+			<br>
+			<br>
+			<div id="nova_initia_tool_barrel_panel_popup" level="top" class="nova_initia_panel_class_top" position="after_start" onpopupshown="NovaInitia.Toolbar.try_popup(document.getElementById('nova_initia_tool_barrel_panel_popup_stash_button'),document.getElementById('nova_initia_tool_barrel_panel_popup'))">
+				<div>
+					<div style="margin-top:135px;position: absolute; z-index: 1"><img id="nova_initia_barrel_panel_popup_image" src="skin/images/overlays/barrel_place.png" top="0" left="0"//></div>
+					<ul align="center" id="nova_initia_tool_barrel_panel_popup_vbox" top="0" left="0" style="position: absolute; z-index: 3;margin-top:130px;list-style-type: none; list-style-position: outside">
+						<input id="nova_initia_tool_barrel_panel_popup_label" class="popupTitle" value="A Barrel!"/ type="text" style="color: black; background: transparent; border: 0px" />
+						<table>
+							<tr>
+								<tr hidden="true">
+									<td><input class="nova_initia_panel_label" value="sg"/ type="text" style="color: black; margin-left: -27px; background: transparent; border: 0px" /></td>
+									<td><input id="nova_initia_tool_barrel_panel_popup_sg" class="nova_initia_panel_input" style="margin-left:-80px" tooltiptext="sg.tooltiptext;" value="0"/></td>
+									<td><div style="position: absolute; z-index: 2"><img class="nova_initia_panel_image" id="nova_initia_tool_barrel_panel_popup_sg_image" src="chrome://nova-initia_toolbar/skin/images/icons/arrow.PNG" hidden="true"//></div></td>
+								</tr>
+								<tr>
+									<td><input class="nova_initia_panel_label" value="traps"/ type="text" style="color: black; margin-left: -27px; background: transparent; border: 0px" /></td>
+									<td><input id="nova_initia_tool_barrel_panel_popup_traps" class="nova_initia_panel_input" style="margin-left:-80px" tooltiptext="traps.tooltiptext;" value="0"/></td>
+									<td><div style="position: absolute; z-index: 2"><img class="nova_initia_panel_image" id="nova_initia_tool_barrel_panel_popup_traps_image" src="chrome://nova-initia_toolbar/skin/images/icons/arrow.PNG" hidden="true"//></div></td>
+								</tr>
+								<tr>
+									<td><input class="nova_initia_panel_label" value="barrels"/ type="text" style="color: black; margin-left: -27px; background: transparent; border: 0px" /></td>
+									<td><input id="nova_initia_tool_barrel_panel_popup_barrels" class="nova_initia_panel_input" style="margin-left:-80px" tooltiptext="barrels.tooltiptext;" value="0"/></td>
+									<td><div style="position: absolute; z-index: 2"><img class="nova_initia_panel_image" id="nova_initia_tool_barrel_panel_popup_barrels_image" src="chrome://nova-initia_toolbar/skin/images/icons/arrow.PNG" hidden="true"//></div></td>
+								</tr>
+								<tr>
+									<td><input class="nova_initia_panel_label" value="spiders"/ type="text" style="color: black; margin-left: -27px; background: transparent; border: 0px" /></td>
+									<td><input id="nova_initia_tool_barrel_panel_popup_spiders" class="nova_initia_panel_input" style="margin-left:-80px" tooltiptext="spiders.tooltiptext;" value="0"/></td>
+									<td><div style="position: absolute; z-index: 2"><img class="nova_initia_panel_image" id="nova_initia_tool_barrel_panel_popup_spiders_image" src="chrome://nova-initia_toolbar/skin/images/icons/arrow.PNG" hidden="true"//></div></td>
+								</tr>
+								<tr>
+									<td><input class="nova_initia_panel_label" value="shields"/ type="text" style="color: black; margin-left: -27px; background: transparent; border: 0px" /></td>
+									<td><input id="nova_initia_tool_barrel_panel_popup_shields" class="nova_initia_panel_input" style="margin-left:-80px" tooltiptext="shields.tooltiptext;" value="0"/></td>
+									<td><div style="position: absolute; z-index: 2"><img class="nova_initia_panel_image" id="nova_initia_tool_barrel_panel_popup_shields_image" src="chrome://nova-initia_toolbar/skin/images/icons/arrow.PNG" hidden="true"//></div></td>
+								</tr>
+								<tr>
+									<td><input class="nova_initia_panel_label" value="doorways"/ type="text" style="color: black; margin-left: -27px; background: transparent; border: 0px" /></td>
+									<td><input id="nova_initia_tool_barrel_panel_popup_doorways" class="nova_initia_panel_input" style="margin-left:-80px" tooltiptext="doorways.tooltiptext;" value="0"/></td>
+									<td><div style="position: absolute; z-index: 2"><img class="nova_initia_panel_image" id="nova_initia_tool_barrel_panel_popup_doorways_image" src="chrome://nova-initia_toolbar/skin/images/icons/arrow.PNG" hidden="true"//></div></td>
+								</tr>
+								<tr>
+									<td><input class="nova_initia_panel_label" value="signposts"/ type="text" style="color: black; margin-left: -27px; background: transparent; border: 0px" /></td>
+									<td><input id="nova_initia_tool_barrel_panel_popup_signposts" class="nova_initia_panel_input" style="margin-left:-80px" tooltiptext="signposts.tooltiptext;" value="0"/></td>
+									<td><div style="position: absolute; z-index: 2"><img class="nova_initia_panel_image" id="nova_initia_tool_barrel_panel_popup_signposts_image" src="chrome://nova-initia_toolbar/skin/images/icons/arrow.PNG" hidden="true"//></div></td>
+								</tr>
+								<tr>
+									<td><input class="nova_initia_panel_label" value="message"/ type="text" style="color: black; margin-left: -27px; background: transparent; border: 0px" /></td>
+									<td><input id="nova_initia_tool_barrel_panel_popup_message" class="nova_initia_panel_input" tooltiptext="message.tooltiptext;" style="margin-left:-80px" emptytext="message.emptytext;" multiline="true" maxlength="512" /></td>
+								</tr>
+							</rows>
+						</table>
+						<ul style="margin-top:130px;list-style-type: none; list-style-position: outside">
+							<div style="margin-left:-230px; margin-top: -110px"><button id="nova_initia_tool_barrel_panel_popup_stash_button" onclick="NovaInitia.Toolbar.stash_barrel();">stash</button></div>
+							<div style="margin-left:60px; margin-top: -26px"><button class="close" label="&nova_initia_cancel" onclick="document.getElementById('nova_initia_tool_barrel_panel_popup').hidePopup();"style="">Close</button></div>
+						</ul>
+					</ul>
+				</div>
+			</div>
+			<br>
+			<br>
+			<br>
+			<div id="nova_initia_tool_barrel_panel_popup_top" level="top" class="nova_initia_panel_class_top" position="after_start" onpopupshown="NovaInitia.Toolbar.try_popup(document.getElementById('nova_initia_tool_barrel_panel_popup_stash_button_top'),document.getElementById('nova_initia_tool_barrel_panel_popup_top'))">
+				<div>
+					<div style="margin-top:135px;position: absolute; z-index: 1"><img id="nova_initia_barrel_panel_popup_top_image" src="skin/images/overlays/barrel_place.png" top="0" left="0"//></div>
+					<ul align="center" top="0" left="0" style="position: absolute; z-index: 3;margin-top:130px;list-style-type: none; list-style-position: outside">
+						<table>
+							<rows>
+								<tr>
+									<td><input class="nova_initia_panel_label" value="sg"/ type="text" style="color: black; margin-left: -27px; background: transparent; border: 0px" /></td>
+									<td><input style="color: black; margin-left: -80px; background: transparent; border: 0px"  id="nova_initia_tool_barrel_panel_popup_sg_top" class="nova_initia_panel_input" tooltiptext="sg.tooltiptext;" value="0"/></td>
+									<td><div style="position: absolute; z-index: 2"><img class="nova_initia_panel_image" id="nova_initia_tool_barrel_panel_popup_sg_image_top" src="chrome://nova-initia_toolbar/skin/images/icons/arrow.PNG" hidden="true"//></div></td>
+								</tr>
+								<tr>
+									<td><input class="nova_initia_panel_label" value="traps"/ type="text" style="color: black; margin-left: -27px; background: transparent; border: 0px" /></td>
+									<td><input style="color: black; margin-left: -80px; background: transparent; border: 0px" id="nova_initia_tool_barrel_panel_popup_traps_top" class="nova_initia_panel_input" tooltiptext="traps.tooltiptext;" value="0"/></td>
+									<td><div style="position: absolute; z-index: 2"><img class="nova_initia_panel_image" id="nova_initia_tool_barrel_panel_popup_traps_image_top" src="chrome://nova-initia_toolbar/skin/images/icons/arrow.PNG" hidden="true"//></div></td>
+								</tr>
+								<tr>
+									<td><input class="nova_initia_panel_label" value="barrels"/ type="text" style="color: black; margin-left: -27px; background: transparent; border: 0px" /></td>
+									<td><input style="color: black; margin-left: -80px; background: transparent; border: 0px" id="nova_initia_tool_barrel_panel_popup_barrels_top" class="nova_initia_panel_input" tooltiptext="barrels.tooltiptext;" value="0"/></td>
+									<td><div style="position: absolute; z-index: 2"><img class="nova_initia_panel_image" id="nova_initia_tool_barrel_panel_popup_barrels_image_top" src="chrome://nova-initia_toolbar/skin/images/icons/arrow.PNG" hidden="true"//></div></td>
+								</tr>
+								<tr>
+									<td><input class="nova_initia_panel_label" value="spiders"/ type="text" style="color: black; margin-left: -27px; background: transparent; border: 0px" /></td>
+									<td><input style="color: black; margin-left: -80px; background: transparent; border: 0px" id="nova_initia_tool_barrel_panel_popup_spiders_top" class="nova_initia_panel_input" tooltiptext="spiders.tooltiptext;" value="0"/></td>
+									<td><div style="position: absolute; z-index: 2"><img class="nova_initia_panel_image" id="nova_initia_tool_barrel_panel_popup_spiders_image_top" src="chrome://nova-initia_toolbar/skin/images/icons/arrow.PNG" hidden="true"//></div></td>
+								</tr>
+								<tr>
+									<td><input class="nova_initia_panel_label" value="shields"/ type="text" style="color: black; margin-left: -27px; background: transparent; border: 0px" /></td>
+									<td><input style="color: black; margin-left: -80px; background: transparent; border: 0px" id="nova_initia_tool_barrel_panel_popup_shields_top" class="nova_initia_panel_input" tooltiptext="shields.tooltiptext;" value="0"/></td>
+									<td><div style="position: absolute; z-index: 2"><img class="nova_initia_panel_image" id="nova_initia_tool_barrel_panel_popup_shields_image_top" src="chrome://nova-initia_toolbar/skin/images/icons/arrow.PNG" hidden="true"//></div></td>
+								</tr>
+								<tr>
+									<td><input class="nova_initia_panel_label" value="doorways"/ type="text" style="color: black; margin-left: -27px; background: transparent; border: 0px" /></td>
+									<td><input style="color: black; margin-left: -80px; background: transparent; border: 0px" id="nova_initia_tool_barrel_panel_popup_doorways_top" class="nova_initia_panel_input" tooltiptext="doorways.tooltiptext;" value="0"/></td>
+									<td><div style="position: absolute; z-index: 2"><img class="nova_initia_panel_image" id="nova_initia_tool_barrel_panel_popup_doorways_image_top" src="chrome://nova-initia_toolbar/skin/images/icons/arrow.PNG" hidden="true"//></div></td>
+								</tr>
+								<tr>
+									<td><input class="nova_initia_panel_label" value="signposts"/ type="text" style="color: black; margin-left: -27px; background: transparent; border: 0px" /></td>
+									<td><input style="color: black; margin-left: -80px; background: transparent; border: 0px" id="nova_initia_tool_barrel_panel_popup_signposts_top" class="nova_initia_panel_input" tooltiptext="signposts.tooltiptext;" value="0"/></td>
+									<td><div style="position: absolute; z-index: 2"><img class="nova_initia_panel_image" id="nova_initia_tool_barrel_panel_popup_signposts_image_top" src="chrome://nova-initia_toolbar/skin/images/icons/arrow.PNG" hidden="true"//></div></td>
+								</tr>
+								<tr>
+									<td><input class="nova_initia_panel_label" value="message"/ type="text" style="color: black; margin-left: -27px; background: transparent; border: 0px" /></td>
+									<td><input style="color: black; margin-left: -80px; background: transparent; " id="nova_initia_tool_barrel_panel_popup_message_top" class="nova_initia_panel_input" tooltiptext="message.tooltiptext;" emptytext="message.emptytext;" multiline="true"/></td>
+								</tr>
+								<tr>
+									<td><input class="nova_initia_panel_label" value="label"/ type="text" style="color: black; margin-left: -27px;background: transparent; border: 0px" /></td>
+									<td><input style="color: black; margin-left: -80px; background: transparent; " id="nova_initia_tool_barrel_panel_popup_label_top" class="nova_initia_panel_input" tooltiptext="label.tooltiptext;" emptytext="label.emptytext;" maxlength="114"/></td>
+								</tr>
+							</rows>
+						</table>
+						<ul style="margin-top:130px;list-style-type: none; list-style-position: outside">
+							<div style="margin-left:-230px; margin-top: -110px"><button class="small" id="nova_initia_tool_barrel_panel_popup_stash_button_top" label="stash_button" onclick="NovaInitia.Toolbar.stash_barrel();" style="">Stash</button></div>
+							<div style="margin-left:60px; margin-top: -26px"><button class="small" label="Dismiss" onclick="document.getElementById('nova_initia_tool_barrel_panel_popup_top').hidePopup();"style="">Dismiss</button></div>
+						</ul>
+					</ul>
+				</div>
+			</div>
+			<!--added 3 line breaks here to make room for button. Delete these later.-->
+			<br>
+			<br>
+			<br>
+			<div id="nova_initia_tool_barrel_loot_panel_popup" class="nova_initia_panel_class_top" noautohide="true">
+				<div>
+					<div style="margin-top:135px;position: absolute; z-index: 1"><img id="nova_initia_barrel_loot_panel_popup_image" src="skin/images/overlays/barrel_place.png" top="0" left="0"//></div>
+					<ul align="center" style="position: absolute; z-index: 3;margin-left:30px;margin-top:130px;list-style-type: none; list-style-position: outside">
+						<input id="nova_initia_tool_barrel_loot_panel_popup_label" class="popupTitle" value="Hi, I'm a Barrel"/ type="text" style="color: black; background: transparent; border: 0px;margin-left:-50px" />
+						<table style="margin-left:-60px;z-index:4">
+							<rows>
+								<tr>
+									<td><input value="sg"/ type="text" style="color: black; background: transparent; border: 0px" /></td>
+									<td><input id="nova_initia_tool_barrel_loot_panel_popup_sg" tooltiptext="&nova_initia_tool_barrel_loot_panel_popup_sg.tooltiptext;" value="0"/ type="text" style="color: black; margin-left:-80px; background: transparent; border: 0px" /></td>
+								</tr>
+								<tr>
+									<td><input value="traps"/ type="text" style="color: black; background: transparent; border: 0px" /></td>
+									<td><input id="nova_initia_tool_barrel_loot_panel_popup_traps" tooltiptext="&nova_initia_tool_barrel_loot_panel_popup_traps.tooltiptext;" value="0"/ type="text" style="color: black; margin-left:-80px; background: transparent; border: 0px" /></td>
+								</tr>
+								<tr>
+									<td><input value="barrels"/ type="text" style="color: black; background: transparent; border: 0px" /></td>
+									<td><input id="nova_initia_tool_barrel_loot_panel_popup_barrels" tooltiptext="&nova_initia_tool_barrel_loot_panel_popup_barrels.tooltiptext;" value="0"/ type="text" style="color: black; margin-left:-80px; background: transparent; border: 0px" /></td>
+								</tr>
+								<tr>
+									<td><input value="spiders"/ type="text" style="color: black; background: transparent; border: 0px" /></td>
+									<td><input id="nova_initia_tool_barrel_loot_panel_popup_spiders" tooltiptext="&nova_initia_tool_barrel_loot_panel_popup_spiders.tooltiptext;" value="0"/ type="text" style="color: black; margin-left:-80px; background: transparent; border: 0px" /></td>
+								</tr>
+								<tr>
+									<td><input value="shields"/ type="text" style="color: black; background: transparent; border: 0px" /></td>
+									<td><input id="nova_initia_tool_barrel_loot_panel_popup_shields" tooltiptext="&nova_initia_tool_barrel_loot_panel_popup_shields.tooltiptext;" value="0"/ type="text" style="color: black; margin-left:-80px; background: transparent; border: 0px" /></td>
+								</tr>
+								<tr>
+									<td><input value="doorways"/ type="text" style="color: black; background: transparent; border: 0px" /></td>
+									<td><input id="nova_initia_tool_barrel_loot_panel_popup_doorways" tooltiptext="&nova_initia_tool_barrel_loot_panel_popup_doorways.tooltiptext;" value="0"/ type="text" style="color: black; margin-left:-80px; background: transparent; border: 0px" /></td>
+								</tr>
+								<tr>
+									<td><input value="signposts"/ type="text" style="color: black; background: transparent; border: 0px" /></td>
+									<td><input id="nova_initia_tool_barrel_loot_panel_popup_signposts" tooltiptext="&nova_initia_tool_barrel_loot_panel_popup_signposts.tooltiptext;" value="0"/ type="text" style="color: black; margin-left:-80px; background: transparent; border: 0px" /></td>
+								</tr>
+								<tr>
+									<td><input value="message"/ type="text" style="color: black; background: transparent; border: 0px" /></td>
+									<td><input id="nova_initia_tool_barrel_loot_panel_popup_message" tooltiptext="&nova_initia_tool_barrel_loot_panel_popup_message.tooltiptext;" style="margin-left:-80px" value="The Message"  multiline="true" readonly="true" maxlength="512"/></td>
+								</tr>
+							</rows>
+						</table>
+						<ul style="z-index:4;margin-top:130px;list-style-type: none; list-style-position: outside">
+							<div style="margin-left:-230px; margin-top: -110px"><button class="small" id="nova_initia_tool_barrel_loot_panel_popup_thanks_button" onclick="NovaInitia.Toolbar.new_message('#nova_initia_barrel_panel_label'); document.getElementById('nova_initia_tool_barrel_loot_panel_popup').hidePopup();">Thanks!</button></div>
+							<div style="margin-left:-10px; margin-top: -25px"><button class="close" label="&nova_initia_close" onclick="');"style="">Close</button></div>
+						</ul>
+					</ul>
+				</div>
+			</div>
+			<div  id="nova_initia_about_panel" position="after_start">
+				<ul style="margin-top:130px;list-style-type: none; list-style-position: outside">
+					<input id="nova_initia_about_panel_label_1" value="Help Menu" / type="text" style="color: black; margin-top: 200px; background: transparent; border: 0px" />
+					<input id="nova_initia_about_panel_label_2" value="" / type="text" style="color: black; background: transparent; border: 0px" />
+					<div style="margin-left:130px;"><button class="dismiss" onclick="document.getElementById('nova_initia_about_panel').hidePopup();"style="">&nbsp;</button></div>
+				</ul>
+			</div>
+		<menupopup id="menu_ToolsPopup">
+			<menu id="menu_nova_initia_tools_menu" insertafter="devToolsSeparator" label="&nova_initia_tools_menu">
+				<menupopup id="menu_nova_initia_tools_menupopup">
+					<menuitem id="nova_initia_tools_menuitem_logout" hidden="true" label="&nova_initia_tools_menupopup_logout" onclick="NovaInitia.Toolbar.logout(true)" />
+					<menuitem id="nova_initia_tools_menuitem_login" hidden="false" label="&nova_initia_tools_menupopup_login" onclick="NovaInitia.Toolbar.process_login(this)" />
+					<menuitem id="nova_initia_tools_menuitem_clear_all" hidden="false" label="&nova_initia_tools_menuitem_clear_all" onclick="NovaInitia.Toolbar.clear_logins()" />
+					<menuitem id="nova_initia_tools_menuitem_sync_user" hidden="false" label="&nova_initia_tools_menuitem_sync_user" onclick="NovaInitia.Toolbar.sync_user()" />
+					<menu id="nova_initia_tools_menu_user_submenu" hidden="true" label="&nova_initia_tools_menu_user_submenu">
+						<menupopup id="menu_nova_initia_tools_menu_user_submenupopup">
+							<menuseparator id="nova_initia_user_menu_separator" />
+							<menuitem id="nova_initia_tools_menu_user_submenu_new" hidden="false" label="&nova_initia_tools_menu_user_submenu_new" onclick="NovaInitia.Toolbar.process_login(this,true,false,true)" />
+						</menupopup>
+					</menu>
+				</menupopup>
+			</menu>
+		</menupopup>
+		<menupopup id="menu_HelpPopup">
+			<menu id="menu_nova_initia_help_menu" insertbefore="updateSeparator" label="&nova_initia_help_menu">
+				<menupopup id="menu_nova_initia_help_menupopup">
+					<menuitem id="nova_initia_help_menuitem_help" hidden="false" tooltiptext="&nova_initia_help_menuitem_help.tooltiptext;" label="&nova_initia_help_menuitem_help" onclick="alert('Help!')" />
+					<menuseparator id="nova_initia_help_menu_separator" />
+					<menuitem id="nova_initia_help_menuitem_about" hidden="false" tooltiptext="&nova_initia_help_menuitem_about.tooltiptext;" label="&nova_initia_help_menuitem_about" onclick="NovaInitia.Toolbar.show_about_panel(document.getElementById('browser'),document.getElementById('nova_initia_about_panel'),document.getElementById('nova_initia_about_panel_label_2'));" />
+				</menupopup>
+			</menu>
+		</menupopup>
+	</body>
+</html>
