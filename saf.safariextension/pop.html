@@ -1,0 +1,34 @@
+<html>
+
+<!-- Mirrored from mikederoche.com/cs320/commoncode/saf/pop.html by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 23 Apr 2012 17:26:24 GMT -->
+<head>
+	<script type="text/javascript">
+		function pop_test()
+		{
+			const myBars = safari.extension.bars;
+			for (var i = 0; i < myBars.length; ++i)
+			{
+				var barWindow = myBars[i].contentWindow;
+				// barWindow.doSomething();
+				var myWindow = safari.application.activeBrowserWindow;
+				if (myBars[i].browserWindow === myWindow)
+				{
+					// barWindow.doSomethingSpecial();
+					barWindow.popover_callback("from popover");
+				}
+			}
+
+			safari.extension.globalPage.contentWindow.foobar();
+		}
+	</script>
+</head>
+<body>
+	<img src="images/overlays/trap_set.jpg" >
+	</img>
+
+	<button onClick="pop_test();">Hide</button>
+
+</body>
+
+<!-- Mirrored from mikederoche.com/cs320/commoncode/saf/pop.html by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 23 Apr 2012 17:26:25 GMT -->
+</html>
