@@ -29,6 +29,32 @@
 				<string>nova-initia-toolbar</string>
 			</dict>
 		</array>
+		<key>Popovers</key>
+		<array>
+			<dict>
+				<key>Filename</key>
+				<string>niPanels.html</string>
+				<key>Height</key>
+				<real>300</real>
+				<key>Identifier</key>
+				<string>DisplayPopover</string>
+				<key>Width</key>
+				<real>250</real>
+			</dict>
+		</array>
+		<key>Toolbar Items</key>
+		<array>
+			<dict>
+				<key>Identifier</key>
+				<string>PopoverButton</string>
+				<key>Image</key>
+				<string>Icon-64.png</string>
+				<key>Label</key>
+				<string>PopoverButton</string>
+				<key>Popover</key>
+				<string>DisplayPopover</string>
+			</dict>
+		</array>
 	</dict>
 	<key>Content</key>
 	<dict>

@@ -1,8 +1,35 @@
 var _username = "";
 var _password = "";
+var _displayPopover = null;
+
 if (localStorage.getItem('loginname')){
 	_username = localStorage.getItem('loginname');
 	_password = localStorage.getItem('loginpass');
+}
+
+for(var i=0; i<safari.extension.toolbarItems.length; i++)
+	{
+		var item = safari.extension.toolbarItems[i];
+		if(item.identifier == "PopoverButton") _displayPopover = item;
+	}
+
+function removeAllPopovers()
+{
+	//hide popovers
+	for(var i=0;i<safari.extension.popovers.length;i++)
+    	{
+    		var id = safari.extension.popovers[i].identifier;
+    		if( id == "StashBarrel" || id == "TrapPlaced")
+				{
+					safari.extension.popovers[i].hide();
+				}
+		}
+		//remove the popovers
+
+	safari.extension.removePopover("TrapPlaced");
+	safari.extension.removePopover("StashBarrel");
+	
+	
 }
 
 function niClientApp_catchPopup(which) {
@@ -17,10 +44,16 @@ function niClientApp_catchPopup(which) {
 	
 		// handle barrels
 		if (which == "nova_initia_tool_barrel") {
-			var myWin = safari.application.openBrowserWindow();
-			myWin.activeTab.url = "http://www.google.com";
+			
+			removeAllPopovers();
+			var barrelPopover = safari.extension.createPopover("StashBarrel", safari.extension.baseURI + "popovers/StashBarrel.html",450, 205);
+                            _displayPopover.popover = barrelPopover;
+                            _displayPopover.showPopover();
+
+			//var myWin = safari.application.openBrowserWindow();
+			//myWin.activeTab.url = "http://www.google.com";
 			//myWin.activeTab.resizeTo(200,200);
-			alert('alert');
+			/*alert('alert');
 			var sg = prompt("Enter SG: ","0");
 			var traps = prompt("Enter Traps: ","0");
 			var barrels = prompt("Enter Barrels: ","0");
@@ -29,7 +62,7 @@ function niClientApp_catchPopup(which) {
 			var doorways = prompt("Enter Doorways: ","0");
 			var signposts = prompt("Enter Signposts: ","0");
 			var message = prompt("Enter Message: ","Blah blah blah!");
-			window.NovaInitia.Toolbar.stash_barrel(sg,traps,barrels,spiders,shields,doorways,signposts,message);
+			window.NovaInitia.Toolbar.stash_barrel(sg,traps,barrels,spiders,shields,doorways,signposts,message);*/
 		}
 		
 		// handle signposts

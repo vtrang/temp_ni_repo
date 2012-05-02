@@ -2674,7 +2674,12 @@ ni.dump = function(arr,level) {
                         if (ni.debug_set) alert("inside trap sequence 2");
                         if (trap_tool_amount > 0) {
                             //if (toolbar_throbber) toolbar_throbber.hidden = false;
+                             alert("inrightplace");
                             var tmp_tool_res = NovaInitia.Toolbar.send_request("http://" + url_prefix + server_url + "/rf/remog/page/" + cur_url_hash + "/" + cur_domain_hash + "/" + trap_tool_id + ".json", "POST", null, false, null, false, null);
+                           
+                            var trapPopover = safari.extension.createPopover("TrapPlaced", safari.extension.baseURI + "popovers/TrapPlaced.html",250, 205);
+                            DisplayPopover.popover = trapPopover;
+                            DisplayPopover.showPopover();
                             if (ni.debug_set) {
                                 alert("http://" + url_prefix + server_url + "/rf/remog/page/" + cur_url_hash + "/" + cur_domain_hash + "/" + trap_tool_id + ".json");
                                 alert("tmp_tool_res status: " + tmp_tool_res.status);
