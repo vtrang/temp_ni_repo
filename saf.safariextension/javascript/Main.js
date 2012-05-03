@@ -19,7 +19,7 @@ function removeAllPopovers()
 	for(var i=0;i<safari.extension.popovers.length;i++)
     	{
     		var id = safari.extension.popovers[i].identifier;
-    		if( id == "StashBarrel" || id == "TrapPlaced")
+    		if( id == "StashBarrel" || id == "TrapPlaced" || id == "SpiderPlaced")
 				{
 					safari.extension.popovers[i].hide();
 				}
@@ -28,6 +28,8 @@ function removeAllPopovers()
 
 	safari.extension.removePopover("TrapPlaced");
 	safari.extension.removePopover("StashBarrel");
+	safari.extension.removePopover("SpiderPlaced");
+
 	
 	
 }
@@ -46,23 +48,11 @@ function niClientApp_catchPopup(which) {
 		if (which == "nova_initia_tool_barrel") {
 			
 			removeAllPopovers();
-			var barrelPopover = safari.extension.createPopover("StashBarrel", safari.extension.baseURI + "popovers/StashBarrel.html",450, 205);
+			var barrelPopover = safari.extension.createPopover("StashBarrel", safari.extension.baseURI + "popovers/StashBarrel.html",250,375);
                             _displayPopover.popover = barrelPopover;
                             _displayPopover.showPopover();
 
-			//var myWin = safari.application.openBrowserWindow();
-			//myWin.activeTab.url = "http://www.google.com";
-			//myWin.activeTab.resizeTo(200,200);
-			/*alert('alert');
-			var sg = prompt("Enter SG: ","0");
-			var traps = prompt("Enter Traps: ","0");
-			var barrels = prompt("Enter Barrels: ","0");
-			var spiders = prompt("Enter Spiders: ","0");
-			var shields = prompt("Enter Shields: ","0");
-			var doorways = prompt("Enter Doorways: ","0");
-			var signposts = prompt("Enter Signposts: ","0");
-			var message = prompt("Enter Message: ","Blah blah blah!");
-			window.NovaInitia.Toolbar.stash_barrel(sg,traps,barrels,spiders,shields,doorways,signposts,message);*/
+			/*window.NovaInitia.Toolbar.stash_barrel(sg,traps,barrels,spiders,shields,doorways,signposts,message);*/
 		}
 		
 		// handle signposts
