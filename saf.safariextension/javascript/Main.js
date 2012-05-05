@@ -19,7 +19,7 @@ function removeAllPopovers()
 	for(var i=0;i<safari.extension.popovers.length;i++)
     	{
     		var id = safari.extension.popovers[i].identifier;
-    		if( id == "StashBarrel" || id == "TrapPlaced" || id == "SpiderPlaced")
+    		if( id == "StashBarrel" || id == "TrapPlaced" || id == "SpiderPlaced" || id == "DoorwayPlaced" || id == "SignpostPlaced")
 				{
 					safari.extension.popovers[i].hide();
 				}
@@ -29,6 +29,8 @@ function removeAllPopovers()
 	safari.extension.removePopover("TrapPlaced");
 	safari.extension.removePopover("StashBarrel");
 	safari.extension.removePopover("SpiderPlaced");
+	safari.extension.removePopover("SignpostPlaced");
+	safari.extension.removePopover("DoorwayPlaced");
 
 	
 	
@@ -48,7 +50,7 @@ function niClientApp_catchPopup(which) {
 		if (which == "nova_initia_tool_barrel") {
 			
 			removeAllPopovers();
-			var barrelPopover = safari.extension.createPopover("StashBarrel", safari.extension.baseURI + "popovers/StashBarrel.html",250,375);
+			var barrelPopover = safari.extension.createPopover("StashBarrel", safari.extension.baseURI + "popovers/StashBarrel.html",250,350);
                             _displayPopover.popover = barrelPopover;
                             _displayPopover.showPopover();
 
@@ -57,18 +59,19 @@ function niClientApp_catchPopup(which) {
 		
 		// handle signposts
 		if (which == "nova_initia_tool_signpost") {
-			var signpost_panel_popup_title = prompt("Enter title: ","");
-			var signpost_panel_popup_comment = prompt("Enter comment: ","");
-			var signpost_panel_popup_nsfw = false;
-			window.NovaInitia.Toolbar.place_signpost(signpost_panel_popup_title,signpost_panel_popup_comment,signpost_panel_popup_nsfw);
+			removeAllPopovers();
+			var signpostPopover = safari.extension.createPopover("SignpostPlaced", safari.extension.baseURI + "popovers/SignpostPlaced.html",250, 185);
+                            _displayPopover.popover = signpostPopover;
+                            _displayPopover.showPopover();
+			//window.NovaInitia.Toolbar.place_signpost(signpost_panel_popup_title,signpost_panel_popup_comment,signpost_panel_popup_nsfw);
 		}
 		//handle doorways
 		if (which == "nova_initia_tool_doorway") {
-			var doorway_popup_panel_URL = prompt("URL:","");
-			var doorway_popup_panel_hint = prompt("Hint:","");
-			var doorway_popup_panel_comment = prompt("Comment:", "");
-			var doorway_popup_panel_nsfw = false;
-			window.NovaInitia.Toolbar.open_doorway(doorway_popup_panel_URL, doorway_popup_panel_hint, doorway_popup_panel_comment, doorway_popup_panel_nsfw);
+			removeAllPopovers();
+			var doorwayPopover = safari.extension.createPopover("DoorwayPlaced", safari.extension.baseURI + "popovers/DoorwayPlaced.html",244,230);
+                            _displayPopover.popover = doorwayPopover;
+                            _displayPopover.showPopover();
+			//window.NovaInitia.Toolbar.open_doorway(doorway_popup_panel_URL, doorway_popup_panel_hint, doorway_popup_panel_comment, doorway_popup_panel_nsfw);
 
 		}
 		
