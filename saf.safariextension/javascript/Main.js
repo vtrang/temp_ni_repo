@@ -54,7 +54,7 @@ function niClientApp_catchPopup(which) {
                             _displayPopover.popover = barrelPopover;
                             _displayPopover.showPopover();
 
-			/*window.NovaInitia.Toolbar.stash_barrel(sg,traps,barrels,spiders,shields,doorways,signposts,message);*/
+			//window.NovaInitia.Toolbar.stash_barrel(sg,traps,barrels,spiders,shields,doorways,signposts,message);
 		}
 		
 		// handle signposts
@@ -71,7 +71,7 @@ function niClientApp_catchPopup(which) {
 			var doorwayPopover = safari.extension.createPopover("DoorwayPlaced", safari.extension.baseURI + "popovers/DoorwayPlaced.html",244,230);
                             _displayPopover.popover = doorwayPopover;
                             _displayPopover.showPopover();
-			//window.NovaInitia.Toolbar.open_doorway(doorway_popup_panel_URL, doorway_popup_panel_hint, doorway_popup_panel_comment, doorway_popup_panel_nsfw);
+			
 
 		}
 		

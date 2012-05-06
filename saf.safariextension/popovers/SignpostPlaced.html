@@ -17,6 +17,8 @@
 
 	<script type="text/javascript" src="../javascript/jquery-1.7.2.js"></script>
 	<script type="text/javascript" src="../javascript/Main.js"></script>
+	<script type="text/javascript" src="../javascript/toolbar.js"></script>
+
 
 	<script type="text/javascript">
 		const myBars = safari.extension.bars;
@@ -38,27 +40,99 @@
 		// }
 		
 		function dismiss()
-		{
-			for(var i=0;i<safari.extension.popovers.length;i++)
-			{
-				if(safari.extension.popovers[i].identifier == "placeSign")
+{
+	//hide popovers
+	for(var i=0;i<safari.extension.popovers.length;i++)
+    	{
+    		var id = safari.extension.popovers[i].identifier;
+    		if( id == "SignpostPlaced")
 				{
 					safari.extension.popovers[i].hide();
-					break;
+				}
+		}
+		//remove the popovers
+	safari.extension.removePopover("SignpostPlaced");
+	
+}
+		function setSign()
+		{ 	
+			var title = $("#title").val();
+			var comments = $("#comments").val();
+			var nsfw = $("#nsfw").is(":checked");
+			placeSign(title,comments,nsfw);
+
+			}
+
+		function placeSign(title, comments, nsfw)
+{
+	// if(signpost_tool_amount>0 && at_a_page)
+	alert(_user);
+	var theParams = "Url="+urlencode(getURL());
+
+	if(title!="") theParams = theParams+"&Title="+urlencode(title);
+	if(comments!="") theParams = theParams+"&Comment="+urlencode(comments);
+	
+	theParams = theParams+"&NSFW="+nsfw;
+
+	var theRes = send_request("http://data.nova-initia.com/rf/remog/page/"+getHashedURL(getURL())+"/"+getHashedDomain(getURL())+"/"+_user.inventory.sign_ID+".json","POST",theParams);
+
+	if(theRes.status==201 || theRes.status==200)
+	{
+		var tmp_info = jQuery.parseJSON(theRes.responseText);
+
+		//sign failed
+	 	if(tmp_info.fail)
+	 	{
+		 	if(tmp_info.fail==true)
+		 	{
+				displayPopover("signFailed", "popovers/fail/signFailed.html", 202);
+		 		// alert("Signpost Failed!");
+		 		_user.inventory.signs -= 1;
+				updateButtons();
+			}
+		}
+
+		//successful?
+		if(tmp_info.pageSet)
+	 	{
+		 	if(tmp_info.pageSet.ID)
+		 	{
+				displayPopover("signSet", "popovers/signSet.html", 202);
+		 		// alert("Signpost Placed!");
+		 		_user.inventory.signs -= 1;
+				updateButtons();
+		 	}
+		}
+
+		//failed
+		if(tmp_info.result)
+		{
+			if (tmp_info.result=="Page Full")
+			{
+				alert("Page full, please try again later");
+			}
+			else
+			{
+				if(tmp_info.result=="Signpost Blocked!")
+				{
+					// NovaInitia.Toolbar.show_panel(spider_panel);
+					_user.inventory.signs -= 1;
+					updateButtons();
 				}
 			}
 		}
-		function setSign()
+		
+		//error
+		if(tmp_info.error)
 		{
-			barWindow.placeSign(
-				$("#title").val(),
-				$("#comments").val(),
-				$("#nsfw").is(":checked")
-			);
-
-			$("form").hide();
-			barWindow.animatePopover(null, 100);
+			// this.send_notification(tmp_info.error,"PRIORITY_INFO_LOW");
 		}
+	}
+	else
+	{
+		alert("Signpost received a bad response!");
+	}
+}
 	</script>
 </head>
 <h3>Place a Signpost</h3>

@@ -3199,6 +3199,7 @@ ni.dump = function(arr,level) {
                         if (Number(theArray[i][0]) == trap_tool_id) {
                             trap_panel_label.value = theArray[i][1] + "'s";
                             trap_panel_image.src = "http://mikederoche.com/cs320/commoncode/skin/images/overlays/trap_triggered.png";
+                            
                             trap_panel_description.value = "trap was sprung!";
                             if (ni.debug_set) alert("Trap Sprung");
                             sg_tool_amount -= theArray[i][3] * 1;

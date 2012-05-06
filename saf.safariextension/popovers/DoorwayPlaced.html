@@ -16,6 +16,23 @@
 
 
 	<script type="text/javascript">
+		
+	function dismiss()
+{
+	//hide popovers
+	for(var i=0;i<safari.extension.popovers.length;i++)
+    	{
+    		var id = safari.extension.popovers[i].identifier;
+    		if( id == "DoorwayPlaced")
+				{
+					safari.extension.popovers[i].hide();
+				}
+		}
+		//remove the popovers
+	safari.extension.removePopover("DoorwayPlaced");
+	
+}
+
 		const myBars = safari.extension.bars;
 		var barWindow = null;
 		//set the barWindow to our novaInitiaBar
@@ -34,23 +51,9 @@
 		if(item.identifier == "PopoverButton") _displayPopover = item;
 		}
 		
-		function hidePopover()
-		{
-			for(var i=0;i<safari.extension.popovers.length;i++)
-			{
-				if(safari.extension.popovers[i].identifier == "DoorwayPlaced")
-				{
-					safari.extension.popovers[i].hide();
-					break;
-				}
-			}
-		}
+	
 
-		function dismiss()
-		{
-			$("body").hide();
-			hidePopover;
-		}
+
 
 		function setDoor()
 		{

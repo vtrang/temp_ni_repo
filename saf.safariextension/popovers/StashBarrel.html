@@ -34,23 +34,24 @@
 			if(item.identifier == "nova-initia-button") ni_button = item;
 		}
 
-		function hidePopover()
-		{
-			for(var i=0;i<safari.extension.popovers.length;i++)
-			{
-				if(safari.extension.popovers[i].identifier == "StashBarrel")
+	function dismiss()
+{
+	//hide popovers
+	for(var i=0;i<safari.extension.popovers.length;i++)
+    	{
+    		var id = safari.extension.popovers[i].identifier;
+    		if( id == "StashBarrel")
 				{
 					safari.extension.popovers[i].hide();
-					break;
 				}
-			}
 		}
+		//remove the popovers
+	safari.extension.removePopover("StashBarrel");
+	
 
-		function dismiss()
-		{
-			$("body").hide();
-			barWindow.animatePopover(hidePopover);
-		}
+	
+	
+}
 
 		function setBarrel()
 		{
