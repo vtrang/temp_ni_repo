@@ -1,6 +1,8 @@
 var globalNi;
 var _globalUsername;
 var _globalPassword;
+var _cur_url_hash = "fuck";
+var _cur_domain_hash;
 
 function StartNI(ni) {
     
@@ -287,7 +289,7 @@ ni.MD5 = function (str)
 	return s;
 }
 
-ni.urlencode = function(str) {
+ni.gurlencode = function(str) {
     // URL-encodes string  
     // 
     // version: 910.813
@@ -1617,6 +1619,8 @@ ni.dump = function(arr,level) {
 
         /* processes a shield hit */
         this.shield_hit = function (sendNotifications, destroyShield) {
+            alert("Your shield protected you");
+
             if (shield_hits_left > 0) {
                 if (destroyShield) {
                     shield_hits_left = 0;
@@ -1629,7 +1633,7 @@ ni.dump = function(arr,level) {
 
                 } else {
                     shield_hits_left--;
-                    if (ni.debug_set) alert("shield left: " + shield_hits_left);
+                    //if (ni.debug_set)
                     if (shield_hits_left == 0) {
                         trap_panel_image.src = "http://mikederoche.com/cs320/commoncode/skin/images/overlays/shield_destroyed.jpg";
                         if (shield_toolbar_button) shield_toolbar_button.image = "http://mikederoche.com/cs320/commoncode/skin/images/icons/no-shield.ico";
@@ -1640,7 +1644,8 @@ ni.dump = function(arr,level) {
                     }
                 }
             } else {
-                if (ni.debug_set) alert("Trap Sprung Without A Shield!");
+                //if (ni.debug_set) 
+                alert("Trap Sprung Without A Shield!");
                 if (shield_toolbar_button) shield_toolbar_button.image = "http://mikederoche.com/cs320/commoncode/skin/images/icons/no-shield.ico";
                 trap_panel_image.src = "http://mikederoche.com/cs320/commoncode/skin/images/overlays/trap_triggered.png";
             }
@@ -2613,6 +2618,7 @@ ni.dump = function(arr,level) {
                     if (theToolID == trap_tool_id && tmp_info.result == "Trap Blocked!") {
                         spider_panel_label.value = tmp_info.username + "'s";
                         spider_panel_description.value = "spider caused the trap to explode in your face!";
+                        alert("spider caused the trap to explode in your face!");
                         spider_panel_image.src = "http://mikederoche.com/cs320/commoncode/skin/images/overlays/spider_triggered.png";
                         NovaInitia.Toolbar.show_panel(spider_panel);
                         trap_tool_amount -= 1;
@@ -2625,6 +2631,7 @@ ni.dump = function(arr,level) {
                     if (theToolID == spider_tool_id && tmp_info.result == "Spider triggered!") {
                         spider_panel_label.value = tmp_info.username + "'s";
                         spider_panel_description.value = "trap drove your spider into a rage!";
+                        alert("trap drove your spider into a rage!");
                         spider_panel_image.src = "http://mikederoche.com/cs320/commoncode/skin/images/overlays/spider_triggered.png";
                         NovaInitia.Toolbar.show_panel(spider_panel);
                         spider_tool_amount -= 1;
@@ -2637,6 +2644,7 @@ ni.dump = function(arr,level) {
                     if (theToolID == signpost_tool_id && tmp_info.result == "Signpost Blocked!") {
                         spider_panel_label.value = tmp_info.username + "'s";
                         spider_panel_description.value = "spider blocked your signpost!";
+                        alert("spider blocked your signpost!");
                         spider_panel_image.src = "http://mikederoche.com/cs320/commoncode/skin/images/overlays/signpost_blocked.jpg";
                         NovaInitia.Toolbar.show_panel(spider_panel);
                         signpost_tool_amount -= 1;
@@ -2800,12 +2808,15 @@ ni.dump = function(arr,level) {
             }
             if (theHashes['url']) cur_url_hash = theHashes['url'];
             if (theHashes['domain']) cur_domain_hash = theHashes['domain'];
+            _cur_url_hash = cur_url_hash;
+            _cur_domain_hash = cur_domain_hash;
             if (ni.debug_set) alert("cur url hash: " + cur_url_hash + " cur domain hash: " + cur_domain_hash);
         };
 
         this.get_cur_url = function () {
             return cur_url;
         };
+
 
         /* logout of current user and return toolbar to initial state */
         this.logout = function (sendNotice) {
@@ -3197,11 +3208,12 @@ ni.dump = function(arr,level) {
                     niClientApp_catchPopup(theArray[i]);
                     if (tool_array[Number(theArray[i][0])]) {
                         if (Number(theArray[i][0]) == trap_tool_id) {
+                            alert("Trap Sprung");
+
                             trap_panel_label.value = theArray[i][1] + "'s";
                             trap_panel_image.src = "http://mikederoche.com/cs320/commoncode/skin/images/overlays/trap_triggered.png";
                             
                             trap_panel_description.value = "trap was sprung!";
-                            if (ni.debug_set) alert("Trap Sprung");
                             sg_tool_amount -= theArray[i][3] * 1;
                             if (sg_tool_amount < 0) sg_tool_amount = 0;
                             NovaInitia.Toolbar.shield_hit(true, false);

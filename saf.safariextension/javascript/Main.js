@@ -77,7 +77,7 @@ function niClientApp_catchPopup(which) {
 		
 	}
 }
-	
+
 function niClientApp_login() {
 	if (localStorage.getItem('loginname') == null) {
 		_username = prompt("Username: ","");
